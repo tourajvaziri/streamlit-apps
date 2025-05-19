@@ -11,8 +11,8 @@ def getAccessToken():
 
     data = {
         "grant_type":"client_credentials",
-        "client_id": st.secret["client_id"],
-        "client_secret": st.secret["client_secret"]
+        "client_id": st.secrets["client_id"],
+        "client_secret": st.secrets["client_secret"]
     }
 
     response = requests.post("https://accounts.spotify.com/api/token",headers=headers, data=data)
